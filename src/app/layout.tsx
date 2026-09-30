@@ -29,6 +29,8 @@ const genInterfaceJP = localFont({
 });
 
 export const metadata: Metadata = {
+  // og:image などの絶対 URL の基準。basePath は自動で付かないため /2026 まで含める
+  metadataBase: new URL("https://www.funvc.live/2026"),
   title: "FUTURE CLASTAR 2026",
   description: "FUTURE CLASTAR 2026 is virtual 3DCG live event of virtual singers such as Hatsune Miku presented by Future University Hakodate Vocaloid Fan Collective.",
 };
