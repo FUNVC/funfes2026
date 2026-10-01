@@ -14,7 +14,7 @@ export default function Section({ id, title, subtitle, children }: Props) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="pb-24 md:pb-32">
       {/*
-       * 見出しの帯。文字サイズはヒーローのタイトル(--hero-title)から割り出すので、それより大きくならない。
+       * 見出しの帯。文字サイズはヒーローのタイトル(--hero-title)を基準に、最小1.875remで設定する。
        * 右端の三角形は帯と同じ高さの正方形で、前セクションとの境目にくっつける。透過部分からセクションの背景色が見える。
        * 文字は三角形の下端に揃える。上の余白も見出しサイズに比例させ、三角形が文字に対して大きくなりすぎないようにする
        */}
@@ -33,7 +33,7 @@ export default function Section({ id, title, subtitle, children }: Props) {
           >
             {title}
           </h2>
-          <p className="text-[max(0.75rem,calc(var(--section-title)*0.3))] leading-none font-bold tracking-widest opacity-70">
+          <p className="text-[calc(var(--section-title)*0.4)] leading-none font-bold tracking-widest opacity-70">
             {subtitle}
           </p>
         </hgroup>

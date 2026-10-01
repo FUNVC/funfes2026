@@ -12,7 +12,7 @@
 
   /* ヒーローの FUTURE CLASTAR がページで一番大きい文字。他の見出しはこれを基準に小さくする */
   --hero-title: min(9vw, 7svh);
-  --section-title: calc(var(--hero-title) * 0.6);
+  --section-title: max(1.875rem, calc(var(--hero-title) * 0.6));
 }
 
 @media (orientation: landscape) {
