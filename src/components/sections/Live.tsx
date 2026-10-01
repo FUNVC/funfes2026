@@ -8,22 +8,21 @@ export default function Live() {
         <dt className="font-bold">日時</dt>
         <dd className="flex flex-col gap-1">
           <time dateTime="2026-10-11">2026年10月11日（日）</time>
-          <span>開場 --:-- / 開演 --:--（予定）</span>
+          <span>開場 16:00 / 開演 16:30</span>
         </dd>
 
         <dt className="font-bold">会場</dt>
-        <dd>（会場名）</dd>
+        <dd>公立はこだて未来大学 講堂</dd>
 
         <dt className="font-bold">チケット</dt>
         <dd className="flex flex-col gap-1">
-          <span>（券種）　¥----</span>
-          <span>（券種）　¥----</span>
+          <span>一般座席未指定（無料） LivePocketにて受付</span>
         </dd>
 
-        <dt className="font-bold">販売期間</dt>
-        <dd>（販売期間）</dd>
+        <dt className="font-bold">受付期間</dt>
+        <dd>10月01日 0:00 ～ 10月11日 16:30</dd>
       </dl>
-      <p className="leading-loose">（チケットの購入方法や補足事項などが入ります。）</p>
+      <p className="leading-loose">チケットの詳細についてはチケット受付サイトをご確認ください。</p>
       <div className="flex justify-center">
         <TicketButton className="text-base md:text-lg" />
       </div>
