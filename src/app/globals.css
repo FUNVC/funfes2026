@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #111111;
-  --foreground: #ededed;
+  --dark-bg: #111111;
+  --dark-fg: #ededed;
+  /* 単調に感じたらここを cyan 系などに差し替える */
+  --light-bg: #ffffff;
+  --light-fg: #111111;
+
+  --background: var(--dark-bg);
+  --foreground: var(--dark-fg);
+
+  /* ヒーローの FUTURE CLASTAR がページで一番大きい文字。他の見出しはこれを基準に小さくする */
+  --hero-title: min(9vw, 7svh);
+  --section-title: calc(var(--hero-title) * 0.6);
+}
+
+@media (orientation: landscape) {
+  :root {
+    --hero-title: min(5vw, 7svh);
+  }
 }
 
 @theme inline {
@@ -16,4 +32,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/*
+ * セクションは並び順で dark / light を交互に切り替える。
+ * 変数ごと上書きするので、中の要素(bg-background, border-foreground など)も自動でそのセクションの配色になる
+ */
+main > section {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+main > section:nth-of-type(even) {
+  --background: var(--light-bg);
+  --foreground: var(--light-fg);
 }
