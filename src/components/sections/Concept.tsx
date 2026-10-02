@@ -2,8 +2,8 @@ import Image from "next/image";
 import miku from "../../../public/miku_mainVisual_2026-resize.png";
 import motif from "../../../public/IMG_3996.jpg";
 import settingArt from "../../../public/20262.jpg";
+import artistIcon from "../../../public/2b1eeb0db25df026-w.png";
 import CornerFrame from "./CornerFrame";
-import Placeholder from "./Placeholder";
 import Section from "./Section";
 
 export default function Concept() {
@@ -47,16 +47,18 @@ export default function Concept() {
             <br />未来大のモチーフを各所にあしらった2026特別衣装です
           </p>
           {/* アーティスト紹介。PC では下端を KV の下端に揃える */}
-          <Placeholder
-            label="アイコン"
-            className="col-start-1 col-end-2 row-start-5 row-end-7 mt-8 mb-6 ml-6 size-24 self-start md:col-start-2 md:col-end-3 md:row-end-8 md:mt-10 md:ml-0 md:size-32"
+          <Image
+            src={artistIcon}
+            alt="アーティストのアイコン"
+            className="aspect-square object-cover col-start-1 col-end-2 row-start-5 row-end-7 mt-8 mb-6 ml-6 size-24 self-start md:col-start-2 md:col-end-3 md:row-end-8 md:mt-10 md:ml-0 md:size-32"
+            sizes="(min-width: 768px) 128px, 96px"
           />
           <p className="col-start-2 col-end-3 row-start-5 row-end-6 mt-8 text-xl font-bold md:col-start-3 md:col-end-4 md:mt-10 md:mr-8 md:-ml-6">
-            （アーティスト名）
+            イラスト：もち
           </p>
           <div className="col-start-2 col-end-3 row-start-6 row-end-7 mt-3 mb-6 flex flex-col gap-2 md:col-start-3 md:col-end-4 md:mt-4 md:mr-8 md:-ml-6">
-            <p className="font-bold">Comment</p>
-            <p className="text-sm leading-relaxed">（アーティストのコメントが入ります。）</p>
+            <p className="font-bold">コメント</p>
+            <p className="text-sm leading-relaxed">ミクちゃんかわいい！</p>
           </div>
         </div>
 
