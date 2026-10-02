@@ -3,9 +3,9 @@ import icon from "../../public/voca_fun_icon.png";
 
 // クレジット表記。項目を増やすときはここに追加する
 const CREDITS = [
-  { role: "主催", name: "未来大ボーカロイド同好会" },
-  { role: "協力", name: "SoundCreate, 公立はこだて未来大学DJサークル" },
-  { role: "モーションキャプチャ支援", name: "公立はこだて未来大学 角康之研究室" },
+  { role: "主催", names: ["未来大ボーカロイド同好会"] },
+  { role: "協力", names: ["北海道大学ボーカロイド同好会", "SoundCreate", "公立はこだて未来大学DJサークル"] },
+  { role: "モーションキャプチャ支援", names: ["公立はこだて未来大学 角康之研究室"] },
 ];
 
 export default function Footer() {
@@ -21,7 +21,11 @@ export default function Footer() {
           {CREDITS.map((credit) => (
             <div key={credit.role} className="contents">
               <dt className="opacity-70">{credit.role}</dt>
-              <dd className="font-medium">{credit.name}</dd>
+              <dd className="flex flex-col gap-1 font-medium">
+                {credit.names.map((name) => (
+                  <span key={name}>{name}</span>
+                ))}
+              </dd>
             </div>
           ))}
         </dl>
