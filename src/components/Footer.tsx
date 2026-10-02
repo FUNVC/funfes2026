@@ -5,7 +5,7 @@ import icon from "../../public/voca_fun_icon.png";
 const CREDITS = [
   { role: "主催", name: "未来大ボーカロイド同好会" },
   { role: "協力", name: "SoundCreate, 公立はこだて未来大学DJサークル" },
-  { role: "モーションキャプチャ支援", name: "角康之研究室" },
+  { role: "モーションキャプチャ支援", name: "公立はこだて未来大学 角康之研究室" },
 ];
 
 export default function Footer() {
