@@ -70,7 +70,7 @@ export default function Attention() {
     <Section id="attention" title="Attention" subtitle="注意事項">
       <div className="flex flex-col gap-10 leading-relaxed">
         <p>
-          本イベントは、非営利無償かつ、クリプトン・フューチャー・メディア株式会社が関与しない、未来代ボーカロイド同好会が主催する自主制作ライブです。
+          本イベントは、非営利無償かつ、クリプトン・フューチャー・メディア株式会社が関与しない、未来大ボーカロイド同好会が主催する自主制作ライブです。
         </p>
         {groups.map((group) => (
           <div key={group.heading} className="flex flex-col gap-3">
