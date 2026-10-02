@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import About from "@/components/sections/About";
 import Access from "@/components/sections/Access";
@@ -18,6 +19,7 @@ export default function Home() {
         <Access />
         <Attention />
       </main>
+      <Footer />
     </>
   );
 }
