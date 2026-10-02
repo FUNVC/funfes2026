@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import About from "@/components/sections/About";
 import Access from "@/components/sections/Access";
 import Attention from "@/components/sections/Attention";
@@ -7,13 +8,16 @@ import Live from "@/components/sections/Live";
 
 export default function Home() {
   return (
-    <main className="w-full">
-      <Hero />
-      <About />
-      <Concept />
-      <Live />
-      <Access />
-      <Attention />
-    </main>
+    <>
+      <Header />
+      <main className="w-full">
+        <Hero />
+        <About />
+        <Concept />
+        <Live />
+        <Access />
+        <Attention />
+      </main>
+    </>
   );
 }

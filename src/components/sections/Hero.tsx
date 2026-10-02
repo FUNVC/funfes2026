@@ -8,18 +8,19 @@ export default function Hero() {
     <section
       id="top"
       className={[
-        "flex h-svh w-full flex-col overflow-x-hidden pt-4 landscape:flex-row landscape:items-center landscape:justify-center landscape:pt-0",
+        "flex h-svh w-full flex-col overflow-x-hidden pt-[calc(var(--header-h)+1rem)] landscape:flex-row landscape:items-center landscape:justify-center landscape:pt-(--header-h)",
+        // 固定ヘッダーの下に収まるよう、上に --header-h ぶんの余白をとって高さ計算からも引く
         // 横並び時は立ち絵とテキストを1つのまとまりとして画面中央に置く
         // 立ち絵の右25%にテキスト側を重ね、浮いた幅のぶんテキストを大きくする
-        "landscape:[--hero-w:min(64svh,48vw)] landscape:[--overlap:calc(var(--hero-w)*0.25)]",
+        "landscape:[--hero-w:min(calc((100svh-var(--header-h))*0.64),48vw)] landscape:[--overlap:calc(var(--hero-w)*0.25)]",
         "landscape:[--hero-title:min(5.5vw,8.5svh)] landscape:[--sub:min(2.75vw,4.25svh)]",
         // ボタンの文字サイズはサブテキストの半分(PC表示での比率)。小さくなりすぎないよう 14px で下げ止める
         "[--btn:max(14px,calc(var(--sub)*0.5))]",
         // 縦並び時のサイズ計算。テキストの高さ = タイトル(leading 1.25) + サブ2行(leading 1.5) + ボタン(3em) + gap-3 × 3
         "[--sub:min(4.5vw,3.5svh)]",
         "[--text-h:calc(var(--hero-title)*1.25+var(--sub)*3+var(--btn)*3+2.25rem)]",
-        // 立ち絵の下20%をテキストと重ねたうえで、pt-4 + pb-6 と合わせて画面に収まる高さ
-        "[--hero-h:min(165vw,calc((100svh-2.5rem-var(--text-h))/0.8))]",
+        // 立ち絵の下20%をテキストと重ねたうえで、ヘッダー + pt-4 + pb-6 と合わせて画面に収まる高さ
+        "[--hero-h:min(165vw,calc((100svh-2.5rem-var(--header-h)-var(--text-h))/0.8))]",
       ].join(" ")}
     >
       <div className="flex justify-center">

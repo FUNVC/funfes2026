@@ -56,6 +56,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ja"
+      // 同一ページ内リンク以外の遷移ではスムーズスクロールを無効にする(Next.js 16 から明示が必要)
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${genInterfaceJP.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

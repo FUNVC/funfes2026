@@ -13,6 +13,20 @@
   /* ヒーローの FUTURE CLASTAR がページで一番大きい文字。他の見出しはこれを基準に小さくする */
   --hero-title: min(9vw, 7svh);
   --section-title: max(1.875rem, calc(var(--hero-title) * 0.6));
+
+  /* 固定ヘッダーの高さ。ヒーローの高さ計算とアンカーへのスクロール位置の補正に使う */
+  --header-h: 3.5rem;
+}
+
+html {
+  /* ナビゲーションで飛んだとき、セクションの頭が固定ヘッダーに隠れないようにする */
+  scroll-padding-top: var(--header-h);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @media (orientation: landscape) {
