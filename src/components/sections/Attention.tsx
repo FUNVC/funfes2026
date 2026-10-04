@@ -1,3 +1,5 @@
+import Image from "next/image";
+import miku from "../../../public/miku_2026_deformed.png";
 import Section from "./Section";
 
 const groups = [
@@ -86,6 +88,22 @@ export default function Attention() {
           皆さまが安全にライブを楽しめるよう、ご理解とご協力をお願いいたします。
         </p>
       </div>
+
+      {/* ページ先頭(ヒーローの #top)へ戻るボタン。スムーズスクロールは globals.css の scroll-behavior に任せる */}
+      <a
+        href="#top"
+        aria-label="ページの先頭へ戻る"
+        className="group flex flex-col items-center gap-1 self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00c8ff]"
+      >
+        <Image
+          src={miku}
+          alt=""
+          aria-hidden
+          className="w-28 transition-transform duration-300 group-hover:-translate-y-2 md:w-36"
+          sizes="(min-width: 768px) 144px, 112px"
+        />
+        <span className="text-xs font-bold tracking-widest uppercase">Go to Top</span>
+      </a>
     </Section>
   );
 }
