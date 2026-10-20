@@ -1,7 +1,7 @@
 import Image from "next/image";
 import miku from "../../../public/miku_mainVisual_2026-resize.png";
 import triangle from "../../../public/voca_fun_triangle.png";
-import TicketButton from "@/components/TicketButton";
+import SetlistButton from "@/components/SetlistButton";
 
 export default function Hero() {
   return (
@@ -53,7 +53,7 @@ export default function Hero() {
             <time dateTime="2026-10-11">2026.10.11 (Sun)</time>
           </p>
           {/* 仮置き */}
-          <TicketButton className="text-(length:--btn)" />
+          <SetlistButton className="text-(length:--btn)" />
         </div>
       </div>
     </section>
